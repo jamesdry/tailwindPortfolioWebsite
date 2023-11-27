@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menubar with Dropdown</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-sans">
+    <!-- Menubar -->
+    <nav class="bg-gray-800 text-white p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <span class="font-semibold text-xl">MyWebsite</span>
+        </div>
+        <div class="relative">
+          <button
+            onclick="toggleDropdown()"
+            class="px-4 py-2 hover:bg-gray-700 rounded transition duration-300"
+          >
+            Menu
+          </button>
+          <div
+            id="dropdownMenu"
+            class="absolute right-0 mt-2 py-2 bg-white rounded shadow-xl w-48 hidden"
+          >
+            <a
+              href="#aboutme"
+              class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+              >About Me</a
+            >
+            <a
+              href="#portfolio"
+              class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+              >Portfolio</a
+            >
+            <a
+              href="#certificates"
+              class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+              >Certificates</a
+            >
+            <a
+              href="#contactus"
+              class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Content Placeholder -->
+    <section id="aboutme" class="py-12 px-4">
+      <!-- Content for About Me -->
+    </section>
+
+    <script>
+      function toggleDropdown() {
+        document.getElementById("dropdownMenu").classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>
